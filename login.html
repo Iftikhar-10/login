@@ -1,0 +1,52 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <header>
+        <h2>windows</h2>
+    </header>
+
+    <body>
+
+        <section class="sec1">
+            <div class="card">
+                <h2>sigh in</h2>
+                <hr>
+                <form class="card-1" action="" method="post">
+                    <h3>Email</h3>
+                    <input type="email" name="email" onkeyup="validation()" id="email">
+                    <span id="error"></span>
+                    <h3>password</h3><input type="password">
+                    <br>
+                    <br>
+                    <div class="btn">
+                        <button id="butn" disabled="disabled">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <script>
+            function validation() {
+                var email = document.getElementById('email').value;
+                const butn = document.getElementById('butn');
+                const error = document.getElementById('error');
+
+                if (email !== '') {
+                    butn.disabled = false;
+                    error.innerHTML = "Your Email is invalid";
+                } else {
+                    butn.disabled = true;
+                    error.innerHTML = "";
+
+                }
+            }
+        </script>
+
+    </body>
+
+</html>
